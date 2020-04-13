@@ -11,7 +11,7 @@ var grid = document.getElementById('pixelCanvas');
 makeGrid(5,5); //default grid
 
 // When size is submitted by the user, call makeGrid()
-sizer.addListenerEvent('submit', function(event) {
+sizer.addEventListener('submit', function(event) {
   event.preventDefault();
   var rows = height.value;
   var cols = width.value;
