@@ -8,7 +8,7 @@ var grid = document.getElementById('pixelCanvas');
 
 // Select color input
 // Select size input
-makeGrid(20,20); //default grid
+makeGrid(5,5); //default grid
 
 // When size is submitted by the user, call makeGrid()
 sizer.addListenerEvent('submit', function(event) {
