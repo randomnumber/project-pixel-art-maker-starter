@@ -19,6 +19,8 @@ sizer.addListenerEvent('submit', function(event) {
 })
 
 function makeGrid(rows, cols) {
+  // clear the default grid
+  grid.innerHTML = ""
   // outer loop on the rows (y-dimension)
   for (var y = 0; y < rows; y++) {
     var row = grid.insertRow(y)
@@ -28,4 +30,3 @@ function makeGrid(rows, cols) {
     }
   }
 }
-ß
