@@ -34,7 +34,7 @@ function makeGrid(rows, cols) {
 }
 
 // Listen for the user to click on a cell
-grid.addEventListener('click', function(event) {
-  if (event.target.nodeName === 'TD') {
-    event.target.style.backgroundColor = colour.value;
-});
+//grid.addEventListener('click', function(event) {
+//  if (event.target.nodeName === 'TD') {
+//    event.target.style.backgroundColor = colour.value;
+//});
