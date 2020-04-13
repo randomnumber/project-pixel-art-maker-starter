@@ -1,4 +1,4 @@
-// declare variables for each of the htrml elements we will be using
+// declare variables for each of the html elements we will be using
 let sizer = document.getElementById('sizePicker');
 let rows = document.getElementById('inputHeight');
 let cols = document.getElementById('inputWidth');
@@ -7,6 +7,8 @@ let grid = document.getElementById('pixelCanvas');
 
 // Select color input
 // Select size input
+makeGrid(20,20); //default grid
+
 
 // When size is submitted by the user, call makeGrid()
 sizer.addListenerEvent('submit', function(event) {
