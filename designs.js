@@ -7,7 +7,7 @@ var colour = document.getElementById('colorPicker'); //English spelling! ;-)
 var grid = document.getElementById('pixelCanvas');
 
 // Select color input
-var userColour = colour.value;
+var userColour = colour.value;  // Default colour if none is chosen (black)
 
 // Select size input
 makeGrid(5,5); //default grid
@@ -35,7 +35,7 @@ function makeGrid(rows, cols) {
 
 // Listen for the user to click on a cell
 grid.addEventListener('click', function(event) {
-  if (event.target.nodeName === 'TD') {
-    event.target.style.backgroundColor = userColour
-  }
-}, false);
+  event.preventDefault();
+  userColour = colour.value;
+  event.target.style.backgroundColor = userColour;
+});
