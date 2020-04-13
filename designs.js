@@ -33,9 +33,17 @@ function makeGrid(rows, cols) {
   }
 }
 
-// Listen for the user to click on a cell
-grid.addEventListener('click', function(event) {
-  // event.preventDefault();
+function colourCell (event) {
   userColour = colour.value;
-  event.target.style.backgroundColor = userColour;
-});
+  event.target.style.backgroundcolor = userColour;
+  event.preventDefault;
+}
+
+grid.addEventListener('click', colourCell);
+
+// Listen for the user to click on a cell
+//grid.addEventListener('click', function(event) {
+//  event.preventDefault();
+//  userColour = colour.value;
+//  event.target.style.backgroundColor = userColour;
+//});
