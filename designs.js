@@ -40,7 +40,7 @@ grid.addEventListener('click', function(event) {
   }
 });
 
-rid.addEventListener('auxclick', function(event) {
+grid.addEventListener('auxclick', function(event) {
   if (event.target.nodeName === 'TD') {
     event.target.innerHTML = "";
   }
