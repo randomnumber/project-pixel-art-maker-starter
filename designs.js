@@ -22,7 +22,7 @@ sizer.addEventListener('submit', function(event) {
 
 function makeGrid(rows, cols) {
   // Clear the default grid
-  grid.innerHTML = ""
+  grid.innerHTML = "";
   // Outer loop on the rows (y-dimension)
   for (var y = 0; y < rows; y++) {
     var row = grid.insertRow(y)
@@ -37,5 +37,11 @@ function makeGrid(rows, cols) {
 grid.addEventListener('click', function(event) {
   if (event.target.nodeName === 'TD') {
     event.target.style.backgroundColor = colour.value;
+  }
+});
+
+rid.addEventListener('auxclick', function(event) {
+  if (event.target.nodeName === 'TD') {
+    event.target.innerHTML = "";
   }
 });
