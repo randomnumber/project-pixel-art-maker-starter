@@ -39,9 +39,3 @@ grid.addEventListener('click', function(event) {
     event.target.style.backgroundColor = colour.value;
   }
 });
-
-grid.addEventListener('auxclick', function(event) {
-  if (event.target.nodeName === 'TD') {
-    event.target.innerHTML = "";
-  }
-});
