@@ -1,16 +1,16 @@
 // declare variables for each of the
 // html elements we will be using
-var sizer = document.getElementById('sizePicker');
-var height = document.getElementById('inputHeight');
-var width = document.getElementById('inputWidth');
-var color = document.getElementById('colorPicker');
-var grid = document.getElementById('pixelCanvas');
+const sizer = document.getElementById('sizePicker');
+const height = document.getElementById('inputHeight');
+const width = document.getElementById('inputWidth');
+const color = document.getElementById('colorPicker');
+const grid = document.getElementById('pixelCanvas');
 
-// Select color input
-var userColor = color.value;  // Default colour if none is chosen (black)
+// Select colour input
+var userColor = color.value;
 
-// Select size input
-makeGrid(5,5); //default grid
+// Create a default grid
+makeGrid(5,5);
 
 // When size is submitted by the user, call makeGrid()
 sizer.addEventListener('submit', function(event) {
@@ -33,7 +33,7 @@ function makeGrid(rows, cols) {
   }
 }
 
-// Listen for the user to click on a cell
+// Listen for the user to click on a cell and use the current colour
 grid.addEventListener('click', function(event) {
   if (event.target.nodeName === 'TD') {
     event.target.style.backgroundColor = color.value;
